@@ -1,0 +1,210 @@
+body {
+  height: 100vh;
+  background-image: url(images/river.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+
+header {
+  height: 90px;
+  
+  color: white;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+  padding-top: 25px;
+}
+
+.nav ul li a {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.logo-wrap h3 {
+  margin: 0 0 0 20px;
+  font-weight: 400;
+  font-size: 30px;
+  color: rgb(56, 61, 65)
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.text {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  font-size: 1.3rem;
+  color: white;
+  z-index: 10;
+}
+.container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  top: 28%;
+  z-index: -1;
+  text-align: center;
+}
+.content {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.content p {
+  font-size: 50px;
+  line-height: 70px;
+  color: white;
+  text-shadow: 0px 5px 7px black;
+}
+
+.content img {
+  width: 64px;
+  height: 64px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+.container.hold {
+  transform: scale(1.2);
+}
+
+.nav img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: rotate 7500ms infinite forwards linear;
+  transform-origin: bottom center;
+}
+
+.pointer {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.circle {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+}
+.outer-circle {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  z-index: -20;
+  background: conic-gradient(
+    #556cb7 0%,
+    #4c59a4 40%,
+    #fff 40%,
+    #fff 60%,
+    #2c237e 60%,
+    #372379 100%
+  )
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes shrink {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+@media (max-width: 760px) {
+  .logo-wrap img {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-wrap h3 {
+    font-size: 20px;
+  }
+  .nav ul li {
+    font-size: 8px;
+  }
+  
+  .content p {
+    font-size: 20px;
+  }
+  .content img {
+    width: 48px;
+    height: 48px;
+  }
+  .circle .text {
+    font-size: 18px;
+    left: 39%;
+    top: 43%;
+  }
+  .container {
+    width: 250px;
+    height: 250px;
+  }
+  .container .app-name {
+    font-size: 25px;
+  }
+  .outer-circle {
+    width: 270px;
+    height: 270px;
+  }
+}
